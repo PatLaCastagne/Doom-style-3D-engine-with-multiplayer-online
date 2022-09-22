@@ -7,11 +7,15 @@ I created a 3D rendering system similar to Doom’s where the character you cont
 
 1. You will need to be connected with your friends to the same network on hamachi.
 2. To avoid any kind of connection problems, don’t forget to disable Windows defender in Control Panel
-3. One of you will have to start the server:
+3. To connect the server to your ip, (local or hammachi ip). You can put it in the txt file here
+```bash
+./IP.txt
+```
+4. One of you will have to start the server:
 ```bash
 ./serv.bat
 ```
-4. You two can then start the engine once on each of your computers. (To play without multiplayer just start the engine without server.)
+5. You two can then start the engine once on each of your computers. (To play without multiplayer just start the engine without server.)
 ```bash
 ./cdm.bat
 ```
