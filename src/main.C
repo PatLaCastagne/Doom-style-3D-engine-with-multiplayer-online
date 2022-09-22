@@ -86,7 +86,11 @@ int main(int argc,char *argv[])
     char buffer[255];
     WSAStartup(MAKEWORD(2,0), &WSAData);
     sock = socket(AF_INET, SOCK_STREAM, 0);
-    syn.sin_addr.s_addr = inet_addr("25.43.1.27");
+    char texte[256];
+    FILE *fic = fopen("IP.txt", "r");
+    fgets(texte, 255, fic);
+    syn.sin_addr.s_addr = inet_addr(texte);
+    fclose(fic);
     syn.sin_family = AF_INET;
     syn.sin_port = htons(23);
     connect(sock, (SOCKADDR *)&syn, sizeof(syn));
